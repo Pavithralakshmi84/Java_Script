@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Elseif condition
+  </title>
+</head>
+
+<body>
+  <h1>Elseif condition</h1>
+  <script>
+    let Mark = 25;
+    if (Mark >= 90) {
+      console.log("Excellant");
+    }
+    else if (Mark >= 75) { console.log("Very Good"); }
+    else if (Mark >= 55) { console.log("Average"); }
+    else if (Mark >= 35) {
+      console.log("Pass");
+    }
+    else { console.log("FAIL"); }
+
+    let Age = 75;
+    if (Age < 13) { console.log("Child"); }
+    else if (Age >= 13 && Age < 20) { console.log("Teenager"); }
+    else if (Age >= 20 && Age < 60) { console.log("Adult"); }
+    else { console.log("Senior Citizen"); }
+
+    let number = 90;
+    if (number <= -1) { console.log("Negative Value"); }
+    else if (number == 0) { console.log("Zero"); }
+    else { console.log("Postive Value"); }
+
+    let x = 50; y = 58; z = 66;
+    if (x > y && x > z) { console.log("X is larger"); }
+    else if (y > x && y > z) { console.log("Y is larger"); }
+    else { console.log("Z is larger"); }
+
+
+    var letter = 'm';
+    if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u') { console.log("Vowels"); }
+
+    else if (letter > 'a' && letter <= 'z')
+      console.log("Consonent");
+    else { console.log("Invalid"); }
+
+
+
+    let value = 18;
+
+    if (value % 3 == 0 && value % 5 == 0) { console.log("Divisible by 3 & 5"); }
+    else if (value % 3 == 0) { console.log("Divisible by 3"); }
+
+    else if (value % 5 == 0) { console.log("Divisible by 5"); }
+    else { console.log("Not divisible by 3 & 5") }
+
+    let month = 4;
+    if (month == 1 || month == 2 || month == 3) { console.log("Winter"); }
+    else if (month >= 4 && month <= 6) { console.log("Summer"); }
+    else if (month >= 7 && month <= 9) {
+      console.log("Spring");
+    }
+    else if (month >= 10 && month <= 12) { console.log("Autumn"); }
+    else {
+      console.log("Snow")
+    }
+
+    var time = 2;
+    if (time >= 0 && time <= 11) { console.log("Good Morning"); }
+    else if (time > 11 && time <= 17) {
+      consoloe.log(
+        "Good Noon"
+      );
+    }
+    else if (time > 17 && time <= 24) { console.log("Good Night"); }
+    else { console.log("invalid Time"); }
+
+    let speed = 20;
+    if (speed <= 60) { console.log("Safe"); }
+    else if (speed > 60 && speed <= 100) { console.log("Speeding"); }
+    else { console.log("Dangerous"); }
+
+
+    var week = 5;
+    if (week == 1 || week == 2 || week == 3 || week == 4 || week == 5) { console.log("Weekday"); }
+    else if (week == 6 || week == 7) { console.log("Weekend"); }
+    else { console.log("Invalid"); }
+
+    let password = 15;
+    if (password <= 6) { console.log("Weak"); }
+    else if (password <= 10) { console.log("Moderate") }
+    else if (password > 10 && password <= 15) { console.log("Strong Password") }
+    else { console.log("Invalid Password") }
+    let marks = 60;
+    if (marks >= 90 && marks <= 100) { console.log("Grade A"); }
+    else if (marks <= 89 && marks >= 75) { console.log("Grade B"); }
+    else if (marks >= 50 && marks <= 74) { console.log("Grade C"); }
+    else { console.log("Below"); }
+
+    var s = 600;
+    if (s <= 100) { console.log("True") }
+    else if (s <= 50) { console.log("false"); }
+    else { console.log("Not match") }
+
+    var color = "pink";
+
+    if (color == "red") {
+      console.log("You love the color of passion!");
+    } else if (color == "blue") {
+      console.log("You enjoy the calmness of the sky!");
+    } else if (color == "green") {
+      console.log("Nature is your favorite!");
+    } else {
+      console.log("That's an interesting choice!");
+    }
+
+    let l = 92, m = 77, n = 30;
+
+    if (l != 50) { console.log(l) }
+    else if (m <= 90) { console.log(m); }
+    else { console.log("Invalid Data") }
+
+    var alpha = 10, beta = 20, gamma = 30;
+
+    if (alpha > beta || beta == gamma) { console.log("Alpha is power"); }
+    else if (beta < gamma || alpha == beta) { console.log("Beta is danger"); }
+    else ("Gamma is Victory")
+    const one = 1, two = 2, three = 3;
+    if (one == 2 || three == 4) { console.log("Success"); }
+    else if (one == 1 || four == 3) { console.log("Great") }
+    else { console.log("Failure"); }
+
+    let black = "crow", white = "dove";
+    if (black != "crow") { console.log("Dancing Bird") }
+    else if (white = "red" || black == "Dove") { console.log("Humming Bird"); }
+    else { console.log("Peacock"); }
+
+
+
+  </script>
+</body>
+
+</html>
