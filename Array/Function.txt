@@ -1,0 +1,88 @@
+        function hello() { console.log("Hello World"); }
+
+        hello()
+
+
+        function alpha(a) {
+            var a = 10;
+            var b = 20;
+            console.log("multiply:", a * b);
+        }
+        alpha()
+
+        function addition() {
+            var a = 5;
+            var y = 62;
+            console.log("Addition:" + a + y);
+        }
+        addition()
+
+        function price() {
+            var price = 500;
+            var GST = 50;
+            console.log("Total:", price + GST);
+        }
+        price()
+
+
+        function even() {
+            num = 200;
+            if (num % 2 == 0) { console.log("Even Number:", num); }
+            else { console.log("Odd Number:", num); }
+
+        } even()
+        function beta() {
+            x = 25;
+            y = 99;
+            if (x > y) { console.log("X is greater"); }
+            else {
+
+                console.log("Y is greater");
+            }
+        }
+        beta()
+
+
+        function name() {
+            var x = 50;
+            var y = 50;
+            var z = 85;
+            console.log(x * y / z);
+
+        }
+        name()
+        function Therapy() {
+            console.log("Physical Therapy");
+            console.log("Occupational Therapy");
+            console.log("Speech Therapy");
+
+
+        }
+        Therapy()
+
+        function payment_mode() {
+
+            console.log("Check Payment");
+            console.log("EFT Payment");
+            console.log("Virtual Credit Card Payment");
+        }
+        payment_mode()
+
+        function Subtraction() {
+            num1 = 99;
+            num2 = 59;
+            console.log("Subtraction", num1 - num2);
+        }
+        Subtraction()
+
+        function area() {
+            length = 50;
+            breath = 95;
+            console.log("Area:", length * breath);
+        }
+        area()
+        function visit() {
+            console.log("Inpatient Visit")
+            console.log("Outpatient Visit")
+        }
+        visit()

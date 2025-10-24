@@ -1,0 +1,77 @@
+        let fruit = ["Apple", "Orange", "Pine Appe", "Jack Fruit"]
+        console.log("Fruits", fruit[0]);
+        console.log(fruit[1]);
+        console.log(fruit[3]);
+        console.log(fruit[3]);
+
+        let Vegetables = ["Tomato", "Onion", "Potato", "Ladies Finger"]
+        console.log("Vegetables", Vegetables[1]);
+        console.log(Vegetables[3]);
+        console.log(Vegetables[3]);
+        console.log(Vegetables[0]);
+
+        var color = ["Red", "Yellow", "Blue", "Black"]
+        console.log("Colors:", color[0]);
+        console.log("Colors:", color[3]);
+        console.log("Colors:", color[2]);
+        console.log("Colors:", color[1]);
+
+        var planet = ["Mercury", "Pluto", "Earth", "Mars"]
+        console.log("Planet:", planet[3]);
+        console.log("Planet:", planet[1]);
+        console.log("Planet:", planet[2]);
+        console.log("Planet:", planet[0]);
+
+        let Bags = ["MK", "Allen solly", null, "Louie vuitton", "Carles Keith"]
+        console.log(Bags[0])
+        console.log(Bags[1])
+        console.log(Bags[2])
+        console.log(Bags[3])
+        console.log(Bags[4])
+
+        let State = ["Missouri", "Arkansas", "California", "Florida"]
+        console.log(State[0])
+        console.log(State[1])
+        console.log(State[2])
+        console.log(State[3])
+        console.log(State[4])
+
+        let pets = ["dog", "cat", "parrot", "fish"]
+        console.log("pets:", pets[0])
+        console.log("pets:", pets[1])
+        console.log("pets:", pets[2])
+        console.log("pets:", pets[3])
+
+        let game = ["Name", "Place", "things", "Animals"]
+
+        console.log("game:", game[0])
+        console.log("game:", game[1])
+        console.log("game:", game[2])
+        console.log("game:", game[3])
+
+        var Countries = ["India", "Australia", "France", "Finland", "Srilanka"]
+        console.log(Countries[0])
+        console.log(Countries[1])
+        console.log(Countries[2])
+        console.log(Countries[3])
+        console.log(Countries[4])
+
+
+        let birds = ["sparrow", "peacock", "hen", "crow", "Ostrich"]
+        console.log(birds[0])
+        console.log(birds[1])
+        console.log(birds[2])
+        console.log(birds[3])
+        console.log(birds[4])
+
+        let therapy = ["Speech", "Occupational therapy", "Physical"]
+        console.log(therapy[0])
+        console.log(therapy[1])
+        console.log(therapy[2])
+
+        let Numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+        console.log(Numbers[0])
+        console.log(Numbers[1])
+        console.log(Numbers[2])
+        console.log(Numbers[3])
+        console.log(Numbers[4])
