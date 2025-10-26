@@ -1,0 +1,57 @@
+function add(a, b) {
+            console.log("Add:", a + b);
+        }
+        add(20, 30);
+        function sub(x, y) {
+            console.log("Sub:", x - y);
+
+        }
+        sub(50, 20);
+        const apple = (fruit) => {
+            console.log("Fruit Name:", fruit);
+        }
+        apple("Mango");
+        function even(value) {
+            if (value % 2 == 0) {
+                console.log(value, "is a Even Number");
+            }
+            else {
+                console.log(value, "is a Odd Number");
+            }
+        }
+        even(100);
+
+        function course(name) {
+
+            console.log(name);
+        }
+        course("frond End Developer");
+
+        function Ice_cream(name) {
+            console.log("Ice_cream Name:", name)
+        }
+        Ice_cream("BlackCurrant");
+
+        function Singer(a) {
+            console.log("Singer Name:", a)
+        }
+        Singer("Saindhavi");
+        function pi(a, b) {
+            z = a / b;
+            console.log("pi Value = ", z);
+        }
+        pi(22, 7);
+        function Cricketer(player) {
+            console.log("Hit Man:", player)
+        }
+        Cricketer("Rohit Sharma");
+        function Bike(name) {
+            console.log("Bike:", name)
+        }
+        Bike("Yamaha");
+        function dancing_bird(name) {
+            console.log("Dancing Bird:", name)
+        }
+        dancing_bird("Peacock");
+        function fav_Briyani(food) { console.log("Fav_Briyani:", food); }
+        fav_Briyani("Prawn Briyani");

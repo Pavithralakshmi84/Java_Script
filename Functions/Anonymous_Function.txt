@@ -1,0 +1,55 @@
+Anonymous Function
+
+
+ const Facility_name = function (name) { console.log("Facility_name:", name); }
+        Facility_name("Mercy Hospital Saint Louis");
+
+        const Facility_addr = function (Address) {
+            console.log("Facility_addr:", Address);
+        }
+        Facility_addr("715, South, New ballas Rd, MO");
+        const provider_name = function (prov_name) {
+            console.log("Provider Name:", prov_name);
+        }
+        provider_name("Linda Skyes");
+
+        const tax_id = function (id) {
+            console.log("Taxid:", id);
+
+        }
+        tax_id(430635493);
+
+        const NPI = function (npi) {
+            console.log("National Provider Id:", npi);
+        }
+        NPI(1427098169);
+
+        const visit = function (financial_Class) { console.log("Finacial Class:", financial_Class); }
+        visit("Emergency");
+
+        const Auth_number = function (auth) {
+            console.log("Auth_number:", auth);
+        }
+        Auth_number("AB00025369741");
+
+        const Payment_mode = function () {
+            console.log("Payment_mode:", "Electronic Fund Transfer")
+        }
+        Payment_mode();
+        const Billing_Provider = function () {
+            console.log("Billing_Provider:", "James Parker");
+        }
+        Billing_Provider();
+
+        const Patient_Name = function () {
+            console.log("Patient_Name", "Negha Shree");
+        }
+        Patient_Name();
+        const Patient_Age = function () {
+            console.log("Patient_Age", "25");
+        }
+        Patient_Age();
+        const diagnosis = function () {
+            console.log("Diagnosis Name:", "Theraphy Services");
+        }
+        diagnosis();

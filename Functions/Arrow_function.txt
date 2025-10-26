@@ -1,0 +1,159 @@
+        const greeting = () => console.log("Hello, World!");
+        greeting();
+
+        const addition = (value1, value2) => {
+            var total = value1 + value2;
+            console.log("Addition:", total);
+        }
+        addition(5, 3);
+
+        const Multiply = (num1, num2) => {
+            console.log("Multiply:", num1 * num2);
+        }
+        Multiply(8, 9)
+
+        const even = (value1) => {
+            if (value1 % 2 == 0) {
+                console.log("Even Number:", value1);
+            }
+            else { console.log("Odd Number:", value1); }
+
+        }
+        even(11);
+
+        const Score = (mark) => {
+            if (mark > 90) {
+                console.log("Excellant Score:", mark);
+            }
+            else {
+
+                console.log("Need to improve", mark);
+            }
+        }
+        Score(55);
+
+        const value = (a, b) => {
+
+            if (a > b) { console.log("A is Greater:", a); }
+            else { console.log("B is greater:", b); }
+        }
+        value(99, 62);
+
+        const divide = (x, y) => { console.log("Divide 25/5:", x / y); }
+        divide(25, 5);
+
+        const Happy = () => { console.log("HAPPY MORNING"); }
+        Happy();
+
+        const Allowed_amt = (paid_amt, patient_resp) => {
+            console.log("Allowed_amt:", paid_amt + patient_resp);
+        }
+        Allowed_amt(500, 250);
+
+        const getMessage = () => {
+            console.log("Welcome to JavaScript");
+        }
+        getMessage();
+
+        const area = (length, breath) => {
+            console.log("Area:", length * breath);
+        }
+        area(50, 60);
+
+        const square = (num) => {
+            console.log("Square value of", num, ":", num * num)
+        }
+        square(5);
+
+        const cube = (num1) => {
+            console.log("Cube value of", num1, ":", num1 * num1 * num1);
+        }
+        cube(25);
+
+        const name = (first_name, Last_name) => {
+            console.log("Full Name:", first_name, Last_name)
+        }
+        name("Pavithra", "Lakshmi");
+
+        const output = (a) => {
+            if (a >= 0) {
+                console.log(a, "is a Postive number");
+            }
+            else { console.log(a, "is a Negative number"); }
+        }
+        output(-96);
+
+        const Welcome = () => { console.log("Welcome to Disney World"); }
+        Welcome();
+
+        const traffic = (color) => {
+            if (color == "red") { console.log("STOP", color); }
+            else if (color == "green") {
+                console.log("Ready to go", color);
+            }
+            else if (color == "yellow") {
+                console.log("WAIT", color)
+            }
+            else {
+                console.log("Invalid Color", color)
+            }
+        }
+        traffic("yellow");
+
+        const values = (a) => {
+            if (a % 3 == 0 && a % 2 == 0) { console.log("Divisible by 2&3:", a); }
+
+            else if (a % 3 == 0) {
+                console.log("Divisible by 3:", a);
+            } else if (a % 2 == 0) {
+                console.log("Divisible by 2:", a);
+            }
+            else { console.log("Not divisible by 2 & 3"); }
+        }
+        values(8);
+
+        const arrow = (a) => {
+            console.log(a);
+        }
+        arrow("Arrow fun");
+
+        const water = (h) => {
+            console.log("Water:", "H" + h + "O")
+        }
+        water(2)
+        const Miss_World = (name) => {
+            console.log("Miss World 1994:", name);
+        }
+        Miss_World("Aishwariya Rai");
+
+        const Miss_Universe = (name) => {
+            console.log("Miss_Universe:", name)
+        }
+        Miss_Universe("SushmitaSushmita Sen");
+
+        const flag = (color) => {
+            console.log("Flag Color:", color);
+        }
+        flag("Tricolor Flag")
+        const Bike = (name) => {
+            console.log("Bike:", name)
+        }
+        Bike("Yamaha");
+        const Mountain = (name) => {
+            console.log(name);
+        }
+        Mountain("Mount Everest");
+
+        const long_river = (river) => {
+            console.log("Longest River in India:", river)
+        }
+        long_river("Ganga River");
+        const Cricketer = (player) => {
+            console.log("Hit Man:", player)
+        }
+        Cricketer("Rohit Sharma");
+        const direction = (name) => {
+            console.log(name);
+        }
+        direction("North-EAST-WEST-SOUTH");
+   
