@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Array
+    </title>
+</head>
+
+<body>
+    <h1>For loop using Array</h1>
+    <script>
+        let numb = [1, 2, 3, 4, 5];
+        for (let i = 0; i < numb.length; i++) {
+            console.log(numb[i]);
+        }
+
+        let arr = [20, 3, 50, 56, 99];
+        let total = 0;
+        {
+            for (let i = 1; i < arr.length; i++)
+                total = arr[i] + total;
+            console.log("Sum of Array:", total);
+        }
+
+        let even = [50, 22, 11, 58, 47, 63, 15];
+        for (let x = 0; x < even.length; x++) {
+            if (even[x] % 2 === 0) {
+                console.log("Even Number", even[x]);
+            } else { console.log("ODD NUMBER", even[x]); }
+        }
+
+        let reverse = [1, 2, 3, 4, 5];
+
+        for (let i = reverse.length - 1; i >= 0; i--) {
+            console.log("Reversed", reverse[i]);
+        }
+    </script>
+</body>
+</html>
