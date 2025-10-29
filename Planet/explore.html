@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Explore Our Planet</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #e0f7fa;
+            color: #004d40;
+        }
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            letter-spacing: 1.5px;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+        .hero {
+            background: url('images/planet-hero.jpg') center/cover no-repeat;
+            height: 100px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+            font-size: 2.4em;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        section.features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        .feature-box {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+        }
+        .feature-box img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #00796b;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+            color: #333;
+        }
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+        @media(max-width: 640px) {
+            section.features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature-box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Explore Our Planet</h1>
+</header>
+
+<main>
+    <div class="hero">
+        Discover the Wonders of Zephira
+    </div>
+
+    <section class="features">
+        <div class="feature-box">
+            <img src="planet_landspace.jpg" alt="Planet Landscape" />
+            <h2>Stunning Landscapes</h2>
+            <p>From glowing beaches to towering peaks, Zephira offers breathtaking views at every corner.</p>
+        </div>
+        <div class="feature-box">
+            <img src="wild_life.jpg" alt="Alien Wildlife"/>
+            <h2>Unique Wildlife</h2>
+            <p>Explore the diverse ecosystems with creatures unlike any other in the universe.</p>
+        </div>
+        <div class="feature-box">
+            <img src="temple.jpg" alt="Ancient Temple" />
+            <h2>Ancient Temples</h2>
+            <p>Discover the mystery of Zephira’s ancient civilizations and their temples.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Zephira Project - All Rights Reserved
+</footer>
+
+</body>
+</html>

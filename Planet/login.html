@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login to Zephira</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    .login-container {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+      width: 320px;
+    }
+    .login-container h2 {
+      margin-bottom: 24px;
+      color: #2a5298;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    button {
+      background-color: #2a5298;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1e3c72;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login to Zephira</h2>
+    <form>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required />
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>
