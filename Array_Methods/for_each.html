@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach method</title>
+</head>
+
+<body>
+    <h1>ForEach method</h1>
+
+    <script>
+        arr = [1, 2, 3, 4, 5, 8, 6, 7, 9]
+
+
+        arr.forEach((value, index) => {
+            console.log(value * 2);
+        });
+        arr.forEach((value, index) => {
+            console.log(value * 5);
+        });
+
+        arr.forEach((value, index) => {
+            console.log("div:", value);
+        });
+        arr.forEach((value, index) => {
+            console.log("8*", value++, "=", value * 8);
+        });
+
+        arr.forEach((value, index) => {
+            console.log("Even number", value++, ":", value % 2 === 0);
+        });
+
+        arr.forEach((value, index) => {
+            console.log("Odd number", value++, ":", value % 2 != 0);
+        });
+
+        arr.forEach((value, index) => {
+            console.log("add", value++, ":", value + index++);
+        });
+        arr.forEach((value, index) => {
+            console.log("9th Table:", "9*", value++, "=", value * 9);
+        });
+
+        arr.forEach(value => {
+            console.log("cube", value, ":", value * value * value);
+        });
+
+        arr.forEach(value => {
+            console.log("square root", value, ":", value * value);
+        });
+
+    </script>
+
+</body>
+
+</html>

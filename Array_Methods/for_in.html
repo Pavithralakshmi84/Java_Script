@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>forin loop</h1>
+    <script>
+
+        let person = { name: "Pavithra", Age: 31, City: "Chennai" };
+        for (let key in person) {
+            console.log(key, ":", person[key]);
+        }
+
+        let color = ["purple", "lavendar", "violet"];
+        for (let i in color) {
+            console.log(i, ":", color[i]);
+        }
+
+        let employee = { name: "Venkat", Deficit: 85, Count: "met" };
+        for (let kpi in employee) {
+            console.log(kpi, ":", employee[kpi]);
+        }
+
+        let traffic = { RED: "STOP", GREEN: "GO", YELLOW: "WAIT" }
+        for (let r in traffic) {
+            console.log(r, ":", traffic[r]);
+
+        }
+
+        let nums = [10, 20, 30];
+        for (let n in nums) {
+            console.log("Index:", n);
+        }
+
+        let book = { title: "JS Guide", author: "John" };
+        for (let b in book) {
+            if (b === "author")
+                console.log(" Author found!");
+        }
+        let word = "COFFEE";
+        for (let h of word) {
+            console.log(h);
+        }
+
+        const arr = ['x', 'y', 'z'];
+        for (let index in arr) {
+            console.log(index);
+        }
+
+        let flower = [ "Rose","Jasmine","Lilly"];
+        for (let r in flower) {
+            console.log(r,"Flower:",flower[r]);}
+
+        const obj = { a: 1, b: 2 };
+        for (let key in obj) {
+            console.log(key);
+        }
+   
+
+        let num = [1, 2, 3, 4,69];
+        for (let n of num) {
+            console.log("Number:", num[n]);
+        }
+
+//for each 
+             arr = [1,2,3,4,5,8,6,7,9]
+
+             arr.forEach((value, index) => {
+  console.log(value*2);
+});
+
+    </script>
+</body>
+
+</html>

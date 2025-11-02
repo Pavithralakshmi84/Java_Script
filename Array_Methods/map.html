@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+    <h1> map</h1>
+    <script>
+        const number = [1, 2, 3, 40, 623]
+        const a = number.map(x => x * 2);
+        console.log("Multiply:", a);
+
+
+        const div = [100, 90, 50, 45, 63, 33, 50];
+        const result = div.map(x => x / 5);
+        console.log("Divisible by 5", result);
+
+
+        const add = [10, 50, 22, 20, 30];
+        const addition = add.map(num => num + 10);
+        console.log("Add:", addition);
+
+        let u = ['d', 'o', 'p', 'm']
+        const o = u.map(s => s.toUpperCase());
+        console.log("toUpperCase:", o);
+
+        let r = ["bag", "Shoe", "wallet", "Chain"]
+        const m = r.map(s => s.toLowerCase());
+        console.log("Lower Case:", m);
+
+        const num = [1, 2, 3, 4, 5, 6];
+        let num1 = num.map(n => Math.sqrt(n));
+        console.log("square root:", num1);
+
+        let num2 = num.map(n => Math.pow(n, 3));
+        console.log("cube:", num2);
+
+        let num3 = num.map(n => n / 2);
+        console.log("Divisibleby 2:", num3);
+
+        let num4 = num.map(n => n * 20);
+        console.log("Multiplyby 20:", num4);
+
+        num.map((a, i) => {
+            console.log("Multiply by 4:", a * 4);
+
+        });
+
+        num.map((a, i) => {
+            console.log("Divide by 4:", a / 4);
+
+        });
+
+        num.map((a, i) => {
+            console.log("Add:", a + 1);
+
+        });
+
+        num.map((a, b) => {
+            console.log("Multiply:", 50 * a);
+
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>
