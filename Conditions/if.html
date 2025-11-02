@@ -10,11 +10,14 @@
 <body>
     <h2>Use if to specify a code block to be executed, if a specified condition is true.</h2>
     <script>
-        var mode_of_payment = "Check";
+     function greet(name){
+     return function(name1)
+{ console.log(name);
+console.log(name1);
+};}
+const greet2=greet("Hello");
+greet2("World");
 
-        if (mode_of_payment == "check") {
-            console.log("Enter the check number");
-        }
 
         var allowed_amount = 100.00;
         paid_amount = 100.00;
