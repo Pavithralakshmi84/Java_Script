@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Shop</title>
+</head>
+
+<body>
+    <h2> Tea kadai</h2>
+
+
+    <script>
+
+        // tea shop menu list//
+
+        let tea = [{ id: 1, name: "TEA", price: 10 }, { id: 2, name: "Ginger Tea", price: 15 }, { id: 3, name: "Lemon tea", price: 25 }, { id: 4, name: "milk", price: 18 }];
+        console.log("Tea Menu:", tea);
+        let coffee = [{ id: 5, name: "strong coffee", price: 20 }, { id: 6, name: "filter coffee", price: 30 }, { id: 7, name: "black coffee", price: 25 }];
+        console.log("Coffee Menu:", coffee);
+        let vada = [{ id: 8, name: "Masal vada", price: 25 }, { id: 9, name: "Medu vada", price: 30 }, { id: 10, name: "Bonda", price: 30 }];
+        console.log("VADA:", vada);
+
+
+
+
+        let cart = [];
+
+
+        function displayMenu(menu, categoryName) {
+            console.log("Shop Menu ---");
+            menu.forEach(item => {
+                console.log(`ID: ${item.id}, Name: ${item.name}, Price: Rs.${item.price}`);
+            });
+        }
+
+
+        function addToCart(itemId) {
+            const allMenus = [...tea, ...coffee, ...vada];
+            const item = allMenus.find(i => i.id === itemId);
+            if (item) {
+                cart.push(item);
+                console.log(`{item.name} Added to cart.`);
+            } else {
+                console.log("Item not found!");
+            }
+        }
+
+
+        function showCart() {
+            if (cart.length === 5) {
+                console.log("Your cart is empty.");
+                return;
+            }
+            console.log("--- Your Cart ---");
+            cart.forEach(item => {
+                console.log(`Name: ${item.name}, Price: Rs${item.price}`);
+            });
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            console.log("Total value:", "Rs.", total);
+        }
+
+
+        displayMenu(tea, "Tea");
+        displayMenu(coffee, "Coffee");
+        displayMenu(vada, "Vada");
+
+        addToCart(20);
+        addToCart(5);
+        addToCart(1);
+
+        showCart();
+
+    </script>
+</body>
+
+</html>
