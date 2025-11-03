@@ -6,25 +6,62 @@
   <title>Flower Image Display</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      color: #5a3e2b;
       text-align: center;
-      margin: 20px;
+      padding: 40px;
+      margin: 0;
     }
-    input {
-      padding: 10px;
-      font-size: 16px;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: #6b4226;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      color: #7a5d3b;
+    }
+    input[type="text"] {
+      padding: 12px 15px;
+      font-size: 1.2rem;
+      border: 2px solid #b78647;
+      border-radius: 8px;
+      width: 300px;
+      max-width: 90%;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #ddb14a;
+      box-shadow: 0 0 5px #ddb14a;
     }
     button {
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-left: 10px;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      margin-left: 15px;
       cursor: pointer;
+      background-color: #b78647;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
     }
-    img {
-      margin-top: 20px;
-      max-width: 300px;
+    button:hover {
+      background-color: rgb(171, 129, 73);
+      color: #5a3e2b;
+    }
+    #flowerImage {
+      margin-top: 30px;
+      max-width: 350px;
+      width: 90%;
       height: auto;
+      border-radius: 15px;
+      box-shadow: 2px 4px 12px rgba(183, 134, 71, 0.6);
       display: none;
+      transition: opacity 0.4s ease;
     }
   </style>
 </head>
@@ -42,7 +79,7 @@
       const flowerName = document.getElementById('flowerName').value.toLowerCase();
       const flowerImage = document.getElementById('flowerImage');
 
-      // Define a mapping of flower names to image URLs
+     
       const flowerImages = {
         rose:  "asset/rose.jpg",
         sunflower: "asset/sunflower.jpg",
@@ -52,7 +89,7 @@
         lotus: "asset/lotus.jpg"
       };
 
-      // Check if the entered flower name exists in the mapping
+     
       if (flowerImages[flowerName]) {
         flowerImage.src = flowerImages[flowerName];
         flowerImage.style.display = 'block';
