@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower Image Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    img {
+      margin-top: 20px;
+      max-width: 300px;
+      height: auto;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Flower Image Display</h1>
+  <p>Enter the name of a flower to see its image:</p>
+  <input type="text" id="flowerName" placeholder="Enter flower name">
+  <button onclick="showFlowerImage()">Show Image</button>
+  <div>
+    <img id="flowerImage" alt="Flower Image">
+  </div>
+
+  <script>
+    function showFlowerImage() {
+      const flowerName = document.getElementById('flowerName').value.toLowerCase();
+      const flowerImage = document.getElementById('flowerImage');
+
+      // Define a mapping of flower names to image URLs
+      const flowerImages = {
+        rose:  "asset/rose.jpg",
+        sunflower: "asset/sunflower.jpg",
+        tulip: "asset/tulip.jpg",
+        lily: "asset/lily.jpg",
+        daisy: "asset/daisy.jpg",
+        lotus: "asset/lotus.jpg"
+      };
+
+      // Check if the entered flower name exists in the mapping
+      if (flowerImages[flowerName]) {
+        flowerImage.src = flowerImages[flowerName];
+        flowerImage.style.display = 'block';
+      } else {
+        flowerImage.style.display = 'none';
+        alert('Sorry, no image available for this flower.');
+      }
+    }
+  </script>
+</body>
+</html>
