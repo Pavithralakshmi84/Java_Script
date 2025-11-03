@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM TEA STALL</title>
+    <style>
+        body {
+            background-color: bisque;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 40px;
+            color: #6b4f4f;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #3d2c2c;
+        }
+
+        button#list, #listitems button, #payment {
+            background-color: #d9a066;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.25rem;
+            padding: 15px 30px;
+            margin: 10px 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        button#list:hover, #listitems button:hover, #payment:hover {
+            background-color: #b07239;
+        }
+
+        #listitems, #payment {
+            display: none;
+            margin: 30px auto;
+        }
+
+        button {
+            cursor: pointer;
+            font-weight: 600;
+            color: #3d2c2c;
+            box-shadow: none;
+            background-color: transparent;
+            font-size: 1.5rem;
+        }
+
+        #image img {
+            margin-top: 25px;
+            max-width: 300px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 2px 4px 12px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+
+    <body>
+    <div>
+        <h1>Welcome to Manikam Tea Kadai</h1>
+        <button id="list">Menu</button>
+
+        <div id="items" class="list" style="display:none;">
+            <button id="tea">TEA</button>
+            <button id="coffee">COFFEE</button>
+            <button id="vada">VADA</button>
+        </div>
+
+        <div id="cls"><button id="payment">payment</button></div>
+        
+        <div id="image"></div>
+    
+</div>
+    <script>
+        var buttonlist = document.getElementById("list");
+        let tolist = document.getElementById("items");
+        let ordertea = document.getElementById("tea");
+        let ordercoffee = document.getElementById("coffee");
+        let ordervada = document.getElementById("vada");
+        let paymentfororders = document.getElementById("payment");
+        let imagedisplay = document.getElementById("image");
+        buttonlist.addEventListener("click", () => {
+            tolist.style.display = "block";
+        });
+
+        ordertea.addEventListener("click", () => {
+            paymentfororders.style.display = "block";
+            paymentfororders.innerHTML = "Please Pay for the Tea Rs.20";
+
+            imagedisplay.innerHTML = '<img src="D:/JAVA SCRIPT/DOM/asset/tea.jpg" alt="Tea" width="200">';
+
+        });
+
+        ordercoffee.addEventListener("click", () => {
+            paymentfororders.style.display = "block";
+            paymentfororders.innerHTML = "Please Pay for the Coffee Rs.25";
+
+            imagedisplay.innerHTML = '<img src="D:/JAVA SCRIPT/DOM/asset/coffee.jpg" alt="Coffee" width="200">';
+
+
+        });
+
+        ordervada.addEventListener("click", () => {
+            paymentfororders.style.display = "block";
+            paymentfororders.innerHTML = "Please Pay for the Vada Rs.35";
+
+            imagedisplay.innerHTML = '<img src="D:/JAVA SCRIPT/DOM/asset/vada.jpg" alt="Vada" width="200">';
+
+        });
+
+        paymentfororders.addEventListener("click", () => {
+
+            alert("Thanks for Coming");
+
+        });
+    </script>
+</body>
+
+</html>
