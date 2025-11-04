@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +14,21 @@
       padding: 40px;
       margin: 0;
     }
+
     h1 {
       font-size: 3rem;
       margin-bottom: 15px;
       font-weight: 700;
       color: #6b4226;
     }
+
     p {
       font-size: 1.2rem;
       margin-bottom: 25px;
       color: #7a5d3b;
     }
-    input[type="text"] {
+
+    input[type='text'] {
       padding: 12px 15px;
       font-size: 1.2rem;
       border: 2px solid #b78647;
@@ -33,11 +37,13 @@
       max-width: 90%;
       transition: border-color 0.3s ease;
     }
-    input[type="text"]:focus {
+
+    input[type='text']:focus {
       outline: none;
       border-color: #ddb14a;
       box-shadow: 0 0 5px #ddb14a;
     }
+
     button {
       padding: 12px 25px;
       font-size: 1.2rem;
@@ -49,15 +55,22 @@
       border-radius: 8px;
       transition: background-color 0.3s ease;
     }
+
     button:hover {
       background-color: rgb(171, 129, 73);
       color: #5a3e2b;
     }
-    #flowerImage {
+
+    #imageContainer {
+      display: flex;
+      justify-content: center;
       margin-top: 30px;
-      max-width: 350px;
-      width: 90%;
-      height: auto;
+    }
+
+    #flowerImage {
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
       border-radius: 15px;
       box-shadow: 2px 4px 12px rgba(183, 134, 71, 0.6);
       display: none;
@@ -65,6 +78,7 @@
     }
   </style>
 </head>
+
 <body>
   <h1>Flower Image Display</h1>
   <p>Enter the name of a flower to see its image:</p>
@@ -79,17 +93,20 @@
       const flowerName = document.getElementById('flowerName').value.toLowerCase();
       const flowerImage = document.getElementById('flowerImage');
 
-     
+
       const flowerImages = {
-        rose:  "asset/rose.jpg",
+        rose: "asset/rose.jpg",
         sunflower: "asset/sunflower.jpg",
         tulip: "asset/tulip.jpg",
         lily: "asset/lily.jpg",
         daisy: "asset/daisy.jpg",
-        lotus: "asset/lotus.jpg"
+        lotus: "asset/lotus.jpg",
+        sangupoo: "asset/sangu_poo.jpg",
+        marigold: "asset/marigold.jpg",
+
       };
 
-     
+
       if (flowerImages[flowerName]) {
         flowerImage.src = flowerImages[flowerName];
         flowerImage.style.display = 'block';
@@ -100,4 +117,5 @@
     }
   </script>
 </body>
+
 </html>

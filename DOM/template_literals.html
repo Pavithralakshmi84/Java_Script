@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template literals</title>
+</head>
+
+<body>
+    <h1 style="color: blueviolet;">Template Literals</h1>
+    <script>
+
+        let name = "World";
+        console.log(`Hello ${name}`);
+
+        let paid_amount = 10, patient_resp = 20;
+        console.log(`\nAllowed amount: ${paid_amount} and ${patient_resp} is ${paid_amount + patient_resp}`);
+
+        let first_name = "Linda"; let Middle_name = "Rose";
+        let last_name = "Skyes";
+        console.log(`Full Name: ${first_name} ${Middle_name} ${last_name}`);
+
+        let fruit = ["Mango", "Orange", "Pineapple","Jackfruit"];
+        console.log(`My favorite fruit is ${fruit[2]}`);
+
+        let city = "Chennai";
+        let country = "India";
+        console.log(`I live in ${city}, ${country}`);
+
+        let cricket_score = 150; let man_of_the_match = "Rohit Sharma";
+        console.log(`Cricket Score: ${cricket_score} by ${man_of_the_match}`);
+
+        let book = "Ponniyan Selvan";
+        let author = "Kalki";
+        console.log(`\nBook: ${book} written by ${author}`);
+
+        let brand = "Michael Kors"; let price = 250;
+        console.log(`\nBrand: ${brand}, Price: $ ${price};`);
+
+        let traffic_signal = "Red";
+        console.log(`\n Traffic signal is ${traffic_signal}, please stop!`);
+
+        let x = 20; let y = 30;
+        console.log(`\n Multiplication of two number x and y is : ${x * y}`);
+
+        let xy = 100; let yz = 50;
+        console.log(`\n Subtraction of two number xy and yz is : ${xy - yz}`);
+
+        let a = 15;
+        if (a % 2 === 0) {
+            console.log(`\n ${a} is even number`);
+        } else {
+            console.log(`\n ${a} is odd number`);
+        }
+
+        let num = 15;
+        if (num > 0) {
+            console.log(`\n ${num} is positive number`);
+        } else {
+            console.log(`\n ${num} is negative number`);
+        }
+
+        let prime_num = 29;
+        let isPrime = true;
+        for (let i = 2; i <= Math.sqrt(prime_num); i++) {
+            if (prime_num % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        console.log(`\n Is ${prime_num} a prime number? : ${isPrime}`);
+
+        let flower = "Jasmine"; let color = "White"; let smell = "Sweet";
+        console.log(`\n Flower: ${flower}, Color: ${color}, Smell: ${smell}`);
+
+
+    </script>
+</body>
+
+</html>
