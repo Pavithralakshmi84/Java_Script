@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+  input[type="text"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 300px;
+    height: 35px;
+    background-color: #f0f4f8; /* Light background */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    resize: none; /* disables textarea resize */
+  }
+
+  textarea {
+    height: 70px; /* taller for address */
+  }
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-family: Arial, sans-serif;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+  }
+
+  button:hover {
+    background-color: #357abd;
+  }
+
+  .box {
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+</style>
+   </head>
+
+<body>
+    <div class="box">
+        <h1>FORM VALIDATION</h1>
+        <label>NAME:</label>
+        <input type="text" id="name" placeholder="Enter your Name"><br>
+        <label>EMAIL:</label>
+        <input type="text" id="email" placeholder="Enter your Email Address"><br>
+        <label>PASSWORD:</label>
+        <input type="password" id="password" placeholder="Enter the Password"><br>
+        <label>AGE:</label>
+        <input type="number" id="age" placeholder="Enter Age"><br>
+        <label>MOBILE NUMBER:</label>
+        <input type="text" id="mobile" placeholder="Enter the Mobile Number"><br>
+        <label>GENDER:</label>
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+        <label>Address:</label>
+        <textarea id="address" placeholder="Enter your Address"></textarea><br>
+        
+        <button id="submitButton">Submit</button>
+
+        <p id="display"></p>
+    </div>
+    <script>
+        const submitButton = document.getElementById("submitButton");
+        const display = document.getElementById("display");
+
+        submitButton.addEventListener("click", () => {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const age = parseInt(document.getElementById("age").value);
+            const mobile = document.getElementById("mobile").value.trim();
+            const gender = document.getElementById("gender").value;
+            const textbox = document.getElementById("address").value.trim();
+
+
+
+            if (email === "" || !email.includes("@")) {
+                display.textContent = "Please enter a valid email!";
+                return;
+            }
+
+            if (password.length < 8) {
+                display.textContent = " Password must be at least 8 characters!";
+                return;
+            }
+
+
+            if (age < 18) {
+                display.textContent = " Age must be 18 or above!";
+                return;
+            }
+
+
+            if (mobile.length !== 10 || isNaN(mobile)) {
+                display.textContent = " Mobile number must be exactly 10 digits!";
+                return;
+            }
+
+
+            if (address.length < 20) {
+                display.textContent = " Text must be at least 20 characters!";
+                return;
+            }
+
+
+            if (gender === "") {
+                display.textContent = "Please select your gender!";
+                return;
+            }
+
+            display.textContent = "";
+            alert(" Form Submitted Successfully!");
+
+            document.getElementById("email").value = "";
+            document.getElementById("password").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("mobile").value = "";
+            document.getElementById("address").value = "";
+            document.getElementById("gender").value = "";
+            doc
+        });
+    </script>
+</body>
+
+</html>

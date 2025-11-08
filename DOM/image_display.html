@@ -2,120 +2,81 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flower Image Display</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fff8f0;
-      color: #5a3e2b;
-      text-align: center;
-      padding: 40px;
-      margin: 0;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f0f8ff;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 15px;
-      font-weight: 700;
-      color: #6b4226;
+    label {
+      font-size: 1.2em;
     }
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 25px;
-      color: #7a5d3b;
-    }
-
-    input[type='text'] {
-      padding: 12px 15px;
-      font-size: 1.2rem;
-      border: 2px solid #b78647;
-      border-radius: 8px;
-      width: 300px;
-      max-width: 90%;
-      transition: border-color 0.3s ease;
-    }
-
-    input[type='text']:focus {
-      outline: none;
-      border-color: #ddb14a;
-      box-shadow: 0 0 5px #ddb14a;
+    input {
+      margin-top: 10px;
+      padding: 8px;
+      font-size: 1em;
     }
 
     button {
-      padding: 12px 25px;
-      font-size: 1.2rem;
-      margin-left: 15px;
+      margin-top: 10px;
+      padding: 8px 12px;
+      font-size: 1em;
       cursor: pointer;
-      background-color: #b78647;
-      color: white;
-      border: none;
+    }
+
+    img {
+      margin-top: 20px;
+      border: 2px solid #ccc;
       border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: rgb(171, 129, 73);
-      color: #5a3e2b;
-    }
-
-    #imageContainer {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-    }
-
-    #flowerImage {
-      width: 350px;
-      height: 350px;
-      object-fit: cover;
-      border-radius: 15px;
-      box-shadow: 2px 4px 12px rgba(183, 134, 71, 0.6);
-      display: none;
-      transition: opacity 0.4s ease;
     }
   </style>
 </head>
 
 <body>
-  <h1>Flower Image Display</h1>
-  <p>Enter the name of a flower to see its image:</p>
-  <input type="text" id="flowerName" placeholder="Enter flower name">
-  <button onclick="showFlowerImage()">Show Image</button>
-  <div>
-    <img id="flowerImage" alt="Flower Image">
-  </div>
 
+  <label for="flowerInput">Enter flower name:
+    <input type="text" id="flowerInput" placeholder="e.g. rose, tulip, daisy, jasmine" /></label>
+  <button id="btn" onclick="displayFlower() ">Show Flower</button>
+  <br /><br />
+  <img id="flowerImage" src="" alt="Flower Image" style="display:none; max-width:300px; max-height:300px;" />
+
+ 
   <script>
-    function showFlowerImage() {
-      const flowerName = document.getElementById('flowerName').value.toLowerCase();
-      const flowerImage = document.getElementById('flowerImage');
+    // Mapping flower names to their image URLs
+    const flowerImages = {
+      rose: "asset/rose.jpg",
+      tulip: "asset/tulip.jpg",
+      daisy: "asset/daisy.jpg",
+      sunflower: "asset/sunflower.jpg",
+      jasmine: "asset/jasmine.jpg",
+      sangupoo: "asset/sangu_poo.jpg",
+      marigold: "asset/marigold.jpg",
+      lotus: "asset/lotus.jpg",
+      hibiscus: "asset/hibiscus.jpg",
+      lily: "asset/lily.jpg"
+    };
 
+    function displayFlower() {
+      const input = document.getElementById("flowerInput").value;
+      const img = document.getElementById("flowerImage");
+      const button = document.getElementById("btn");
+      const flowerInput = input.toLowerCase();
 
-      const flowerImages = {
-        rose: "asset/rose.jpg",
-        sunflower: "asset/sunflower.jpg",
-        tulip: "asset/tulip.jpg",
-        lily: "asset/lily.jpg",
-        daisy: "asset/daisy.jpg",
-        lotus: "asset/lotus.jpg",
-        sangupoo: "asset/sangu_poo.jpg",
-        marigold: "asset/marigold.jpg",
+      if (flowerInput == "rose" || flowerInput == "tulip" || flowerInput == "daisy" || flowerInput == "sunflower" || flowerInput == "jasmine" || flowerInput == "sangupoo" || flowerInput == "marigold" || flowerInput == "lotus" || flowerInput == "hibiscus" || flowerInput == "lily") {
+        img.src = flowerImages[input.toLowerCase()];
+        img.style.display = "block";
 
-      };
-
-
-      if (flowerImages[flowerName]) {
-        flowerImage.src = flowerImages[flowerName];
-        flowerImage.style.display = 'block';
       } else {
-        flowerImage.style.display = 'none';
-        alert('Sorry, no image available for this flower.');
+        alert("Flower not found.");
       }
     }
   </script>
+
 </body>
 
 </html>
