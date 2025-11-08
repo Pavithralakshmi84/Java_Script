@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tamil traditions</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(108deg, #fdf6e3 0%, #e0c3fc 100%);
+      color: #252525;
+    }
+
+    header {
+      background: #6a11cb;
+      color: #fff;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .logo h4 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #ffe082;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.12rem;
+      margin-left: 28px;
+      padding: 7px 17px;
+      border-radius: 15px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .nav a:hover {
+      background: #ffe082;
+      color: #6a11cb;
+    }
+
+    .home {
+      max-width: 720px;
+      margin: 34px auto 14px auto;
+      text-align: center;
+      background: #fff;
+      border-radius: 18px;
+      padding: 26px 34px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    }
+
+    .home h2 {
+      color: #6a11cb;
+      font-size: 2rem;
+      margin-bottom: 8px;
+      margin-top: 0;
+    }
+
+    .home p {
+      font-size: 1.25rem;
+      margin: 0;
+      color: #5d497a;
+    }
+
+    .pictures {
+      margin: 32px auto 16px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 22px;
+      max-width: 1100px;
+      padding: 12px;
+    }
+
+    .pictures div {
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 12px 9px 14px 9px;
+      text-align: center;
+      box-shadow: 0 2px 15px 0 rgba(150, 120, 200, .13);
+      transition: transform 0.14s;
+    }
+
+    .pictures div:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 4px 24px 0 rgba(120, 90, 180, .17);
+    }
+
+    .pictures img {
+      width: 100%;
+      max-width: 120px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 7px;
+      margin-bottom: 7px;
+      box-shadow: 0 2px 12px rgba(106, 17, 203, 0.10);
+    }
+
+    .pictures p {
+      margin: 0;
+      font-weight: bold;
+      color: #6a11cb;
+      font-size: 1rem;
+    }
+
+    #form {
+      justify-content: center;
+      padding: 26px 20px;
+      background: #8ec5fc;
+      margin: 30px auto 24px auto;
+      border-radius: 15px;
+      max-width: 430px;
+      box-shadow: 0 6px 18px rgba(50, 50, 120, 0.11);
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    form label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #4e0b69;
+      margin-bottom: 4px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px 13px;
+      border: 1.2px solid #b6a5c5;
+      border-radius: 7px;
+      margin-bottom: 14px;
+      background: #f6f2fa;
+      font-size: 1rem;
+      transition: border 0.16s;
+    }
+
+    form textarea {
+      resize: vertical;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border: 1.5px solid #6a11cb;
+      background: #f3e9fb;
+      outline: none;
+    }
+
+    form button {
+      background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+      color: #fff;
+      font-size: 1.12rem;
+      font-weight: bold;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 7px;
+      cursor: pointer;
+      margin-top: 5px;
+      align-self: center;
+      letter-spacing: 1px;
+    }
+
+    form button:hover {
+      background: linear-gradient(90deg, #ffe082 0%, #e0c3fc 100%);
+      color: #6a11cb;
+      transform: scale(1.04);
+    }
+
+    footer {
+      margin-top: 22px;
+      padding: 13px;
+      background: #6a11cb;
+      color: #fff;
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.1rem;
+      border-radius: 0 0 10px 10px;
+      letter-spacing: 1.1px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+
+    <div class="navbar">
+      <div class="logo">
+        <h4>தமிழ் பாரம்பரியம் </h4>
+      </div>
+      <nav>
+        <div class="nav">
+          <a href="#home">Home</a>
+          <a href="#Traditional books">Traditional books</a>
+          <a href="#register">Register</a>
+      </nav>
+    </div>
+    </div>
+
+  </header>
+  <section id="home">
+    <div class="home">
+      <h2>
+        <center>Welcome to Tamil Culture
+      </h2>
+      </center>
+      <p style="font-size: 20px;">History of Tamil Literature has a rich literary tradition spanning more than 2000
+        years.
+        It encompasses
+        ancient Sangam literature, which includes classic works like Silappatikaram and Manimekalai, and later
+        periods marked by religious and philosophical texts.</p>
+    </div>
+    <br> <br>
+    <seaction id="Traditional books">
+      <h1 style="text-align: center; color: #4e0b69; margin-bottom: 20px;">Traditional Tamil Books</h1>
+      <div class="pictures" id="books">
+        <div>
+          <img src="asset/poniyan.jpg" alt="">
+          <p>பொன்னியின் செல்வன்</p>
+        </div>
+        <div>
+          <img src="asset/parthiban.jpg" alt="">
+          <p>பார்த்திபன் கனவு</p>
+        </div>
+        <div>
+          <img src="asset/Bagavath-Geethai.jpeg" alt="">
+          <p>பகவத் கீதை</p>
+        </div>
+        <div>
+          <img src="asset/tamil.jpg" alt="">
+          <p>வரலாறு</p>
+        </div>
+        <div>
+          <img src="asset/mahabharatham.jpg" alt="">
+          <p>மகாபாரதம்</p>
+        </div>
+        <div>
+          <img src="asset/thirukural.jpg" alt="">
+          <p>திருக்குறள்</p>
+        </div>
+        <div>
+          <img src="asset/Tamil-Ilakkanam.jpg" alt="">
+          <p>தமிழ் இலக்கணம்</p>
+        </div>
+        <div>
+          <img src="asset/thenali.jpg" alt="">
+          <p>தெனாலி ராமன்</p>
+        </div>
+      </div>
+      </div>
+
+      <section id="register">
+        <div id="form">
+          <h2 style="text-align: center; color: #4e0b69; margin-bottom: 20px;">Registeration Form</h2>
+          <form id="tamilForm"
+            style="text-align: center; margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 15px; ">
+            <label for="name">Name:
+              <input type="text" id="name" name="name" required style="width: 200px; height: 10;" /> </label>
+
+            <label for=" mobile"> Mobile:
+              <input type="text" id="mobile" name="mobile" required pattern="\d{10}" placeholder="10 digit number"
+                style="width: 200px; height: 10;" /></label><br>
+
+            <label for="quote">Quote:
+              <textarea id="quote" name="quote" required style="width: 200px; height: 10;"></textarea></label><br>
+
+            <label for="book">Tamil Book Name:
+              <input type="text" id="book" name="book" required style="width: 200px; height: 10;" /></label><br>
+
+            <button id=showBtn type="submit" style="width: 200px; height: 10;">Submit</button>
+          </form>
+
+
+
+          <script>
+            const form = document.getElementById('tamilForm');
+
+            form.addEventListener('submit', function (event) {
+              event.preventDefault(); // Prevent form from actually submitting
+
+              // Collect form data into an array
+              const formDataArray = [
+                document.getElementById('name').value.trim(),
+                document.getElementById('mobile').value.trim(),
+                document.getElementById('quote').value.trim(),
+                document.getElementById('book').value.trim()
+              ];
+
+              console.log('Form data array:', formDataArray);
+
+              // You can further process the array or send it to server here
+
+              // Optional: clear the form
+              form.reset();
+
+              alert('Submitted Successfully!');
+            });
+          </script>
+
+          </form>
+        </div>
+        <footer>Copyrights@1800 Reserved</footer>
+
+</body>
+
+</html>
