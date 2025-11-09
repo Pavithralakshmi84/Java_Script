@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rest Operator Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            color: #007acc;
+        }
+
+        p {
+            background: #e6f2ff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Rest Operator</h1>
+
+    <p id="result"></p>
+
+
+    <script>
+        function sum(...vals) {
+            let total = 0;
+            for (const v of vals) total += v;
+            return total;
+        }
+        console.log(" Sum of numbers (10,20,30,40):", sum(10, 20, 30, 40));
+
+        function Even(...nums) {
+            return nums.filter(n => n % 2 === 0);
+        }
+        console.log(" Even Numbers from (11,22,33,44,55):", Even(11, 22, 33, 44, 55).join(", "));
+
+        function Odd(...nums) {
+            return nums.filter(n => n % 2 !== 0);
+        }
+        console.log(" Odd Numbers from (12,23,34,45,56):", Odd(12, 23, 34, 45, 56).join(", "));
+
+        function prime(...nums) {
+            return nums.filter(n => {
+                if (n <= 1) return false;
+                for (let i = 2; i <= Math.sqrt(n); i++) {
+                    if (n % i === 0) return false;
+                }
+                return true;
+            });
+        }
+        console.log(" Prime Numbers from (10,15,23,28,31):", prime(10, 15, 23, 28, 31).join(", "));
+
+        function multiply(...nums) {
+            return nums.reduce((prod, n) => prod * n, 1);
+        }
+        console.log(" Multiplication of numbers (2,3,4):", multiply(2, 3, 4));
+
+        function fruit(...items) {
+            return items;
+        }
+        console.log(" Fruits are (Mango,Apple,Banana):", fruit("Mango", "Apple", "Banana", "Jackfruit").join(", "));
+
+        function chocolates(...flavors) {
+            return flavors;
+        }
+        console.log(" Chocolates are (Dairy Milk,5 Star,KitKat):", chocolates("Dairy Milk", "KitKat").join(", "));
+
+
+        // 1. Function to show results in page
+        function showResult(exampleNum, description, result) {
+            const p = document.createElement("p");
+            p.textContent = `Input: ${exampleNum}\n Output: ${description}`;
+            document.getElementById("result").appendChild(p);
+        }
+        showResult(" Sum of numbers (10,20,30,40)", sum(10, 20, 30, 40));
+        showResult(" Even Numbers from (11,22,33,44,55)", Even(11, 22, 33, 44, 55).join(", "));
+        showResult(" Odd Numbers from (12,23,34,45,56)", Odd(12, 23, 34, 45, 56).join(", "));
+        showResult(" Multiplication of numbers (2,3,4)", multiply(2, 3, 4));
+        showResult(" Fruits are [Mango,Apple,Banana]", fruit("Mango", "Apple", "Banana").join(", "));
+        showResult(" Chocolates are [Dairy Milk,5 Star,KitKat]", chocolates("Dairy Milk", "KitKat").join(", "));
+        showResult(" Prime Numbers from (10,15,23,28,31)", prime(10, 15, 23, 28, 31).join(", "));
+    </script>
+
+</body>
+
+</html>

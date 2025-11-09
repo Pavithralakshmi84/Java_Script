@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Destructuring</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Destructuring Using Arrays and Objects</h1>
+
+    <h1 style="color: purple;">Array Destructuring</h1>
+
+    <p id="result"></p>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <p id="result5"></p>
+    <p id="result6"></p>
+    <p id="result7"></p>
+    <p id="result8"></p>
+    <p id="result9"></p>
+    <p id="result10"></p>
+    <p id="result11"></p>
+
+    <h1 style="color: green;">Object Destructuring</h1>
+
+    <p id="result12"></p>
+    <p id="result13"></p>
+    <p id="result14"></p>
+    <p id="result15"></p>
+    <p id="result16"></p>
+    <p id="result17"></p>
+    <p id="result18"></p>
+    <p id="result19"></p>
+    <p id="result20"></p>
+    <p id="result21"></p>
+
+
+
+    <script>
+        //array destructuring
+
+
+
+        let fruits = ["Apple", "Banana", "Cherry", "Pineapple", "Mango", "Jackfruit"];
+        let [fruit1, fruit2, fruit3, fruit4, fruit5, fruit6] = fruits;
+        let result1 = document.getElementById("result1");
+        result1.innerHTML = `\n  FAV Fruits: ${fruit2} and ${fruit4}`;
+
+        let chocolates = ["Dairy Milk", "5 Star", "Munch", "KitKat", "Bournville"];
+        let [c1, c2, c3, c4, c5] = chocolates;
+        let result2 = document.getElementById("result2");
+        result2.innerHTML = ` FAV Chocolate : ${c2} and ${c4}`;
+
+
+        let bags = ["Gucci", "Prada", "Lou Vuitton", "Chanel"];
+        let [bag1, bag2, bag3, bag4] = bags;
+        let result9 = document.getElementById("result3");
+        result9.innerHTML = ` Bag brand : ${bag1} and ${bag3}`;
+
+
+
+        let food = ["Biryani", "Pizza", "Burger", "Pasta", "Salad"];
+        let [food1, food2, food3, food4, food5] = food;
+        let result11 = document.getElementById("result4");
+        result11.innerHTML = ` Food : ${food1} and ${food3}`;
+
+        let nuts = ["Almonds", "Cashews", "Walnuts", "Ptachios"];
+        let [nut1, nut2, nut3, nut4] = nuts;
+        let result12 = document.getElementById("result5");
+        result12.innerHTML = ` Nuts : ${nut2} and ${nut1}`;
+
+        let snacks = [" Bingo Chips", "Cookies", "Popcorn", "Potato Chips"];
+        let [snack1, snack2, snack3, snack4] = snacks;
+        let result13 = document.getElementById("result6");
+        result13.innerHTML = ` Snacks : ${snack1} and ${snack3}`;
+
+        let mountains = ["Everest", "Kolli Hills", "Paruvatha Malai", "Hill Station"];
+        let [mountain1, mountain2, mountain3, mountain4] = mountains;
+        let result14 = document.getElementById("result7");
+        result14.innerHTML = `Highest Mountains : ${mountain1} and ${mountain3}`;
+
+        let rivers = ["Ganga", "vaigai", "yamuna", "Tamirabarani"];
+        let [river1, river2, river3, river4] = rivers;
+        let result15 = document.getElementById("result8");
+        result15.innerHTML = `Longest Rivers : ${river1} and ${river4}`;
+
+        let desserts = ["Ice Cream", "Brownie", "Cupcake", "Milkshake"];
+        let [dessert1, dessert2, dessert3, dessert4] = desserts;
+        let result16 = document.getElementById("result9");
+        result16.innerHTML = ` Desserts : ${dessert2} and ${dessert4}`;
+
+        let street_foods = ["Chaat", "Vada Pav", "Pani Puri", "Dosa", "kalan Masala"];
+        let [street_food1, street_food2, street_food3, street_food4, street_food5] = street_foods;
+        let result17 = document.getElementById("result10");
+        result17.innerHTML = ` Street foods : ${street_food3} and ${street_food5}`;
+
+        let fraces = ["Dominos", "McDonalds", "KFC", "Subway", "Aaladipattiyan"];
+        let [frace1, frace2, frace3, frace4, frace5] = fraces;
+        let result19 = document.getElementById("result11");
+        result19.innerHTML = ` Food fraces : ${frace1} and ${frace4}`;
+
+
+
+        // object destructuring
+
+        let person = { firstName: "Pavithra", lastName: "Lakshmi", age: 30, city: "Madurai" };
+        let { firstName, lastName, age, city } = person;
+        let output = document.getElementById("result12");
+        output.innerHTML = ` Name: ${firstName} ${lastName}, Age: ${age}, City: ${city}`;
+
+        let company = { name: "TechCorp", location: "Bangalore", employees: 500 };
+        let { name: companyName, location: companyLocation, employees: numberOfEmployees } = company;
+        let output1 = document.getElementById("result13");
+        output1.innerHTML = ` Company: ${companyName}, Location: ${companyLocation}, Employees: ${numberOfEmployees}`;
+
+        let sweet = { type: "Gulab Jamun", price: 50, quantity: 10 };
+        let { type: sweetType, price: sweetPrice, quantity: sweetQuantity } = sweet
+        let output2 = document.getElementById("result14");
+        output2.innerHTML = ` Sweet: ${sweetType}, Price: ${sweetPrice}, Quantity: ${sweetQuantity}`;
+
+        let animals = { species: "Dog", breed: "Golden Retreive", age: 5 };
+        let { species: animalSpecies, breed: animalBreed, age: animalAge } = animals;
+        let output3 = document.getElementById("result15");
+        output3.innerHTML = ` Animal: ${animalSpecies}, Breed: ${animalBreed}, Age: ${animalAge}`;
+
+        let vehicles = { type: "Cycle", brand: "just buy cycles", model: "2000" };
+        let { type: vehicleType, brand: vehicleBrand, model: vehicleModel } = vehicles;
+        let output4 = document.getElementById("result16");
+        output4.innerHTML = ` Vehicle: ${vehicleType}, Brand: ${vehicleBrand}, Model: ${vehicleModel}`;
+
+        let chat_food = { name: "Pani Puri", price: 30, taste: "yummy" };
+        let { name: chatName, price: chatPrice, taste: chatTaste } = chat_food;
+        let output5 = document.getElementById("result17");
+        output5.innerHTML = ` Chat Food: ${chatName}, Price: ${chatPrice}, Taste: ${chatTaste}`;
+
+        let district = { name: "Madurai", population: "15 lakhs", place: "temple" };
+        let { name: districtName, population: districtPopulation, place: districtPlace } = district;
+        let output6 = document.getElementById("result18");
+        output6.innerHTML = ` District: ${districtName}, Population: ${districtPopulation}, Place: ${districtPlace}`;
+
+        let laptop = { brand: "Dell", model: "Inspiron", price: 55000 };
+        let { brand: laptopBrand, model: laptopModel, price: laptopPrice } = laptop;
+        let output7 = document.getElementById("result19");
+        output7.innerHTML = ` Laptop: ${laptopBrand}, Model: ${laptopModel}, Price: ${laptopPrice}`;
+
+        let fransies = { name: "Dominos", location: "Chennai", specialty: "Pizza" };
+        let { name: fransieName, location: fransieLocation, specialty: fransieSpecialty } = fransies;
+        let output8 = document.getElementById("result20");
+       output8.innerHTML = ` Fransie: ${fransieName}, Location: ${fransieLocation}, Specialty: ${fransieSpecialty}`;
+
+        let movie = { title: "Titanic", Hero: "Leonardo DiCaprio", Heroine: "Kate Winslet" };
+        let { title: movieTitle, Hero: movieHero, Heroine: movieHeroine } = movie;
+        let output9 = document.getElementById("result21");
+        result10.innerHTML = ` Movie: ${movieTitle}, Hero: ${movieHero}, Heroine: ${movieHeroine}`;
+
+        let Falls = { name: "Hogenakkal Falls", location: "Tamilnadu", boat: "Parisil", count: 5 };
+        let { name: FallsName, location: FallsLocation, boat: FallsBoat, count: FallsCount } = Falls;
+        let output10 = document.getElementById("result22");
+        output10.innerHTML = ` Falls: ${FallsName}, Location: ${FallsLocation}, Boat: ${FallsBoat}, Count: ${FallsCount}`;
+
+    </script>
+</body>
+
+</html>

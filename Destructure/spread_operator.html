@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+
+<body>
+    <h1>Spread Operator</h1>
+    <script>
+        const num = [1, 2, 3, 4, 5];
+        const [...numbers] = num;
+        console.log(...numbers);
+
+        const colors = ["red", "green", "blue"];
+        const [first, ...second] = colors;
+        console.log(first, ...second);
+
+        const chocolate = ["chocolate", "Icecream"];
+        const [...dessert] = chocolate;
+        console.log(...dessert);
+
+        const flavors = ["vennila", "strawberry", "chocolate"];
+        const [...varieties] = flavors;
+        console.log(...varieties);
+
+        const name1 = ["Pavithra", "Lakshmi"];
+        const [...name] = name1;
+        console.log(...name);
+
+        const num12 = [6, 7, 8, 9, 10];
+        const [...third] = num12;
+        console.log(...third);
+
+        const evenNum = [2, 4, 6, 8, 10, 15, 11, 19, 30];
+
+        function findEvenNumbers(...nums) {
+            return nums.filter(num => num % 2 === 0);
+        }
+        console.log("Even Numbers are:", findEvenNumbers(...evenNum));
+
+        const oddNum = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        function findOddNumbers(...nums) {
+            return nums.filter(num => num % 2 !== 0);
+        }
+        console.log("Odd Numbers are:", findOddNumbers(...oddNum));
+
+        const fruits = ["Mango", "Apple", "Banana"];
+        const [...favFruits] = fruits;
+        console.log(...favFruits);
+
+
+    </script>
+</body>
+
+</html>
