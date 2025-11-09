@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JavaScript Promise Syntax</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #202020;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    line-height: 1.6;
+  }
+  h1, h2, h3 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  a {
+    color: #007acc;
+    text-decoration: none;
+    border-bottom: 1px solid #007acc;
+  }
+  a:hover {
+    color: #005f99;
+    border-bottom: 2px solid #005f99;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 16px;
+    margin-bottom: 25px;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  ul {
+    margin-left: 20px;
+    margin-bottom: 25px;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+  <h1>JavaScript Promise Syntax</h1>
+  <p>
+    A <strong>Promise</strong> in JavaScript represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+  </p>
+  <h2>Example</h2>
+  <pre><code>let myPromise = new Promise(function(resolve, reject) {
+  // Producing Code (May take some time)
+  let success = true;  // Change this to false to check error
+  if (success) {
+    resolve("The data has loaded successfully!");
+  } else {
+    reject("There was an error loading the data.");
+  }
+});
+
+myPromise.then(function(message) {
+  console.log(message);  // This runs if the promise is fulfilled
+}).catch(function(error) {
+  console.log(error);    // This runs if the promise is rejected
+});
+</code></pre>
+
+  <h2>Creating a Promise</h2>
+  <p>To create a promise, use the <code>Promise</code> constructor which takes a function with two arguments: <code>resolve</code> and <code>reject</code>.</p>
+  <pre><code>let promise = new Promise((resolve, reject) => {
+  // Do something that might take time
+  let condition = true;
+  if (condition) {
+    resolve("Success!");
+  } else {
+    reject("Failure!");
+  }
+});
+</code></pre>
+
+  <h2>Consuming a Promise</h2>
+  <p>Once you have a promise, you can use <code>.then()</code> and <code>.catch()</code> methods to handle the resolved or rejected state.</p>
+  <pre><code>promise.then((message) => {
+  console.log(message); // Handle success
+}).catch((error) => {
+  console.log(error);   // Handle error
+});
+</code></pre>
+
+  <h2>Chaining Promises</h2>
+  <p>You can chain multiple <code>.then()</code> methods to perform sequential asynchronous operations.</p>
+  <pre><code>fetchData().then((data) => {
+  console.log("Data received:", data);
+  return processData(data);
+}).then((processedData) => {
+  console.log("Processed data:", processedData);
+}).catch((error) => {
+  console.log("Error:", error);
+});
+</code></pre>
+
+  <p>References:  
+    <a href="https://www.w3schools.com/js/js_promise.asp" target="_blank" rel="noopener">W3Schools</a>,  
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="noopener">MDN Web Docs</a>,  
+    <a href="https://www.geeksforgeeks.org/javascript-promise/" target="_blank" rel="noopener">GeeksforGeeks</a>  
+  </p>
+
+
+  <script>
+
+    function walkDog(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+            const dogWalked = true;
+
+            if(dogWalked){
+                resolve("You walk the dog 🐕");
+            }
+            else{
+                reject("You DIDN'T walk the dog");
+            }
+        }, 1500);
+    });
+}
+
+function cleanKitchen(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            
+            const kitchenCleaned = true;
+
+            if(kitchenCleaned){
+                resolve("You clean the kitchen 🧹");
+            }
+            else{
+                reject("You DIDN'T clean the kitchen");
+            }
+        }, 2500);
+    });
+}
+
+function takeOutTrash(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+
+            const trashTakenOut = true;
+
+            if(trashTakenOut){
+                resolve("You take out the trash ♻");
+            }
+            else{
+                reject("You DIDN'T take out the trash");
+            }
+
+        }, 500);
+    });
+}
+
+walkDog().then(value => {console.log(value); return cleanKitchen()})
+                  .then(value => {console.log(value); return takeOutTrash()})
+                  .then(value => {console.log(value); console.log("You finished all the chores!")})
+                  .catch(error => console.error(error));
+  </script>
+</body>
+</html>

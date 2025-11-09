@@ -1,0 +1,285 @@
+<html>
+
+<head>
+    <title>promise</title>
+</head>
+
+<body>
+    <h1>PROMISE Syntax</h1>
+    <script>
+        let promise = new Promise((resolve, reject) => {
+            // Asynchronous operation here
+            let success = true; // change to false to test reject
+            if (success) {
+                resolve("Operation was successful!");
+            } else {
+                reject("Operation failed.");
+            }
+        });
+
+        // Consuming the promise:
+        promise
+            .then(result => console.log("Resolved:", result))     // handle success
+            .catch(error => console.error("Rejected:", error));  // handle failure
+
+
+        let promise1 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve("Course Competed");
+            } else {
+                reject("Not Completed");
+            }
+        });
+
+        promise1
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+        let promise2 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve("Ready to Go");
+            } else {
+                reject("Wait");
+            }
+        });
+
+        promise2
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+        let promise3 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve("Won the Trophy");
+            } else {
+                reject("Not Won");
+            }
+        });
+
+        promise3
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+
+
+
+
+
+
+
+        let promise5 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve(`\n Mission Sucess`);
+            } else {
+                reject(`\n Mission Failed`);
+            }
+        });
+
+        promise5
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+
+
+        let promise6 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve(`\n Mission Sucess`);
+            } else {
+                reject(`\n Mission Failed`);
+            }
+        });
+
+        promise6
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+
+
+        let promise7 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve(`\n Mission Sucess`);
+            } else {
+                reject(`\n Mission Failed`);
+            }
+        });
+
+        promise7.then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+
+        let promise8 = new Promise((resolve, reject) => {
+
+            let success = false;
+            if (success) {
+                resolve(`\n Won the World Cup`);
+            } else {
+                reject(`\n Lost the Cup`);
+            }
+        });
+
+        promise8
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+
+        let promise9 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve(`\n Mission Sucess`);
+            } else {
+                reject(`\n Mission Failed`);
+            }
+        });
+
+        promise9
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+        let promise10 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve(`\n Sucessfully Submitted`);
+            } else {
+                reject(`\n Failed to submit`);
+            }
+        });
+
+        promise10
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+
+        let promise11 = new Promise((resolve, reject) => {
+
+            let success = false;
+            if (success) {
+                resolve(`\n Mission Sucess`);
+            } else {
+                reject(`\n Mission Failed`);
+            }
+        });
+
+        promise11
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+        let promise12 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve(`\n Mission Sucess`);
+            } else {
+                reject(`\n Mission Failed`);
+            }
+        });
+
+        promise12
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+        let promise13 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve(`\n Mission Sucess`);
+            } else {
+                reject(`\n Mission Failed`);
+            }
+        });
+
+        promise13
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+        let promise14 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve(`\n Mission Sucess`);
+            } else {
+                reject(`\n Mission Failed`);
+            }
+        });
+
+        promise14
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+
+        let promise15 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve(`\n Mission Sucess`);
+            } else {
+                reject(`\n Mission Failed`);
+            }
+        });
+
+        promise15
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+
+        let promise16 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve(`\n Find the Puzzle`);
+            } else {
+                reject(`\n  Unable to find`);
+            }
+        });
+
+        promise16
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+        let promise17 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve(`\n Mission Sucess`);
+            } else {
+                reject(`\n Mission Failed`);
+            }
+        });
+
+        promise16
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+        let promise18 = new Promise((resolve, reject) => {
+
+            let success = true;
+            if (success) {
+                resolve(`\n Race Started🏃🏃`);
+            } else {
+                reject(`\n Not yet Started`);
+            }
+        });
+
+        promise18
+            .then(result => console.log("Resolved:", result))
+            .catch(error => console.error("Rejected:", error));
+
+
+
+
+    </script>
+</body>
+
+</html>

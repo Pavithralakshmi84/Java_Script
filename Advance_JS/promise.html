@@ -1,0 +1,66 @@
+<script>
+    // Using Callback
+    function leave(callback) {
+        setTimeout(() => {
+            console.log(`\n Planned leave Approved. `)
+            callback();
+        }, 1000);
+    }
+
+    function mode(callback) {
+        setTimeout(() => {
+            console.log("Approved for Work from Home💻");
+            callback();
+        }, 200);
+    }
+
+    leave(()=>{
+        mode(()=> {
+            console.log("Approved Successfully!")   })
+    })
+
+    function fetchDataCallback(callback) {
+        setTimeout(() => {
+            const data = "Sick Leave🤒";
+            callback(null, data);
+        }, 2000);
+    }
+
+    fetchDataCallback((error, result) => {
+        if (error) {
+            console.error("Error:", error);
+        } else {
+            console.log(result);
+        }
+    });
+
+
+    // Using Promise
+
+    function leave1() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const data1 = "Planned Leave";
+                const error = false;
+                if (!error) {
+                    resolve(data1);
+                } else {
+                    reject("Unplanned Leave");
+                }
+            }, 1000);
+        });
+    }
+
+    leave1()
+        .then(result => console.log(result))
+        .catch(error => console.error(error));
+
+
+
+
+
+
+</script>
+</body>
+
+</html>
