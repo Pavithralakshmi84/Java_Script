@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JavaScript Concepts - Fetch, Table, foreach, Promise, DOM</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #f9fafb;
+    padding: 20px 30px;
+    color: #202020;
+    line-height: 1.6;
+  }
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  h2 {
+    color: #34495e;
+    margin-top: 40px;
+  }
+  p {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  ul {
+    margin-left: 20px;
+    margin-bottom: 25px;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 40px;
+  }
+  th, td {
+    border: 1px solid #aab2bd;
+    padding: 10px 15px;
+    text-align: left;
+  }
+  th {
+    background-color: #ecf0f1;
+    font-weight: 700;
+  }
+  code {
+    background-color: #eaeaea;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: Consolas, monospace;
+  }
+</style>
+</head>
+<body>
+  <h1>JavaScript Concepts Overview</h1>
+
+  <section>
+    <h2>1. Fetch()</h2>
+    <p>It is used to make HTTP Requests like getting data from an API or sending data to a server.</p>
+    <p><strong>Why we use fetch()</strong></p>
+    <ul>
+      <li>To get data from APIs</li>
+      <li>To send data to servers</li>
+      <li>To update or delete data on a server</li>
+    </ul>
+    <p><strong>Where we use fetch()</strong></p>
+    <ul>
+      <li>Web applications that display live or dynamic data.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. Table</h2>
+    <p>A table is a way to display data in rows and columns.</p>
+    <p><strong>Tags:</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>&lt;table&gt;</code></td><td>Creates a table</td></tr>
+        <tr><td><code>&lt;tr&gt;</code></td><td>Table row</td></tr>
+        <tr><td><code>&lt;th&gt;</code></td><td>Table header (bold)</td></tr>
+        <tr><td><code>&lt;td&gt;</code></td><td>Table data cell</td></tr>
+      </tbody>
+    </table>
+
+    <h3>foreach()</h3>
+    <ul>
+      <li>Executes the function for each element</li>
+      <li>It’s often used to loop through arrays and perform actions</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. .then()</h2>
+    <ul>
+      <li>It is a function that runs one after another</li>
+      <li>Runs when promise is fulfilled</li>
+    </ul>
+
+    <h3>Array Methods</h3>
+    <ul>
+      <li><code>map()</code> - Create a new array by applying a function; it can return a value</li>
+      <li><code>filter()</code> - Return a new array that passes a condition; returns all elements that match the condition</li>
+      <li><code>reduce()</code> - Reduce the array to a single value by using accumulator</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. DOM</h2>
+    <ul>
+      <li>It is a Document Object Model</li>
+      <li>It is an API method to handle HTML structures and values</li>
+      <li>It converts the HTML file into an object-like tree structure</li>
+      <li>It is the live representation of an HTML page</li>
+      <li>JavaScript can use it to read, modify, delete, and add elements dynamically</li>
+      <li>Methods include selectors, properties, events, and event listeners</li>
+      <li>The selector is used for interaction — to change, modify or manipulate elements</li>
+      <li>The property is used to show on the screen</li>
+      <li>The event is used to tell the browser what the user is doing</li>
+    </ul>
+  </section>
+</body>
+</html>
