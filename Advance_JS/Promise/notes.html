@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tea Making Process with Promises</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px auto;
+      max-width: 700px;
+      background: #f4f7fa;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #log {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 6px;
+      min-height: 150px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      color: #2c3e50;
+    }
+    button {
+      display: block;
+      margin: 20px auto 0 auto;
+      padding: 10px 20px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3498db;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tea Making Process with Promises</h1>
+  <div id="log"></div>
+  <button id="startBtn">Start Tea Process</button>
+
+  <script>
+    const logDiv = document.getElementById('log');
+    const startBtn = document.getElementById('startBtn');
+
+    function log(message) {
+      logDiv.textContent += message + "\n";
+    }
+
+    function makeTea() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          log("Tea is ready ☕");
+          resolve("Tea done");
+        }, 2000);
+      });
+    }
+
+    function serveTea() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          log("Tea served to customer 🍵");
+          resolve("Tea served successfully");
+        }, 1500);
+      });
+    }
+
+    function customerHappy() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          log("Customer is happy 😄");
+          resolve("Customer satisfied");
+        }, 1000);
+      });
+    }
+
+    function startTeaProcess() {
+      logDiv.textContent = '';
+      makeTea()
+        .then((msg) => {
+          log("Step 1 Done: " + msg);
+          return serveTea();
+        })
+        .then((msg2) => {
+          log("Step 2 Done: " + msg2);
+          return customerHappy();
+        })
+        .then((msg3) => {
+          log("Step 3 Done: " + msg3);
+          log("All process done ✅");
+        })
+        .catch((err) => {
+          log("Error: " + err);
+        });
+    }
+
+    startBtn.addEventListener('click', startTeaProcess);
+  </script>
+</body>
+</html>

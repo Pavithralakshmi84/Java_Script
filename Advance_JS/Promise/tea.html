@@ -1,0 +1,48 @@
+<script>
+
+
+    function makeTea() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("1️⃣ Tea is ready ☕");
+      resolve("Tea done");
+    }, 2000);
+  });
+}
+
+function serveTea() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("2️⃣ Tea served 🍵");
+      resolve("Tea served done");
+    }, 1500);
+  });
+}
+
+function customerHappy() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("3️⃣ Customer happy 😄");
+      resolve("Customer satisfied");
+    }, 1000);
+  });
+}
+
+// PROMISE CHAIN
+makeTea()
+  .then((msg1) => {
+    console.log(msg1);
+    return serveTea();
+  })
+  .then((msg2) => {
+    console.log(msg2);
+    return customerHappy();
+  })
+  .then((msg3) => {
+    console.log(msg3);
+    console.log("✅ All steps completed without callback hell!");
+  })
+  .catch((err) => {
+    console.log("❌ Error:", err);
+  });
+</script>

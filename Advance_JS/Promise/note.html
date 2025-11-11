@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JavaScript Promises FAQ</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f0f4f8;
+    color: #2c3e50;
+  }
+  h1 {
+    text-align: center;
+    color: #2980b9;
+    margin-bottom: 30px;
+  }
+  .faq-item {
+    margin-bottom: 25px;
+  }
+  .question {
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 6px;
+    font-size: 1.2rem;
+  }
+  .answer {
+    margin-left: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #3b4a5a;
+  }
+  em {
+    font-style: italic;
+    color: #7f8c8d;
+  }
+  code {
+    background-color: #e8f0fe;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+  }
+</style>
+</head>
+<body>
+  <h1>JavaScript Promises FAQ</h1>
+
+  <div class="faq-item">
+    <p class="question">Q: What is a Promise?</p>
+    <p class="answer">
+      A Promise is like a <em>"contract"</em> between your code and a future result. It says — "I’ll do something, and once done, I’ll either give you a result (resolve) or an error (reject)."
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <p class="question">Q: What is <code>.then()</code> used for?</p>
+    <p class="answer">
+      <code>.then()</code> runs when the Promise is resolved — that means the success case. We can chain multiple <code>.then()</code> calls to run steps one after another in sequential flow.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <p class="question">Q: What is <code>.catch()</code> used for?</p>
+    <p class="answer">
+      <code>.catch()</code> handles error cases. If any promise fails (rejects), then <code>.catch()</code> will run to handle the error.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <p class="question">Q: Why do we use return inside <code>.then()</code>?</p>
+    <p class="answer">
+      Each <code>.then()</code> should return the next promise so the chain continues properly.
+    </p>
+  </div>
+
+</body>
+</html>
