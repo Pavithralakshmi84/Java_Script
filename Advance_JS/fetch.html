@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cart Data</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quotes Data</title>
+  <style>
+    .quote-card {
+      border: 1px solid #ccc; 
+      margin: 10px; 
+      padding: 15px; 
+      width: 300px; 
+      display: inline-block; 
+      vertical-align: top;
+      box-shadow: 2px 2px 6px #aaa;
+      font-family: Arial, sans-serif;
+    }
+    .quote-text {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .quote-author {
+      text-align: right;
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-  <h2>CART ITEMS</h2>
-  <div id="cart"></div>
+  <h2>Quotes</h2>
+  <div id="quotes"></div>
 
   <script>
-    const cart = document.getElementById("cart");
+    const quotesDiv = document.getElementById("quotes");
 
     const get_data = async () => {
       try {
-       fetch('https://dummyjson.com/quotes')
-.then(response => response.blob()) // Convert response to blob
-.then(blob => {
-  console.log('Fetched image blob:', blob);
-})
+        const response = await fetch("https://dummyjson.com/quotes");
+        const data = await response.json();
+        const quotesArray = data.quotes;
 
-        
-        carts.forEach(cartItem => {
-          cartItem.products.forEach(product => {
-            cart.innerHTML += `
-              <div style="border:1px solid #ccc; margin:10px; padding:10px; width:250px; display:inline-block; vertical-align:top;">
-                <img src="${product.thumbnail}" width="200">
-                <h3>${product.title}</h3>
-                <p>Price: ₹${product.price}</p>
-                <p>Quantity: ${product.quantity}</p>
-                <p>Total:${product.total}</p>
-                 <p>Discount:${product.discountPercentage}</p>
-              </div>
-            `;
-          });
+        quotesArray.forEach(quoteItem => {
+          quotesDiv.innerHTML += `
+            <div class="quote-card">
+              <div class="quote-text">"${quoteItem.quote}"</div>
+              <div class="quote-author">- ${quoteItem.author}</div>
+            </div>
+          `;
         });
-
       } catch (err) {
         console.error("Error fetching data:", err);
+        quotesDiv.innerHTML = `<p>Failed to load quotes.</p>`;
       } finally {
         console.log("Process Completed");
       }
