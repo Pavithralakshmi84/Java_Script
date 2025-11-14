@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problems of Environment</title>
+
+
+   <style>
+   body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.mainform {
+    max-width: 600px;
+    background-color:tan;
+    padding: 30px;
+    border-radius: 10px;
+   
+}
+
+.myform {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#display {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .mainform {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;"> FORM DETAILS</h1>
+    <div class="mainform" id="mainform">
+        <form id="myform" class="myform">
+            <div class="info">
+                <label>Enter your Name</label>
+                <input id="name" type="text" placeholder="Enter name">
+            </div>
+
+            <div class="info">
+                <label>Enter your Mobile No</label>
+                <input id="mobile" type="tel" placeholder="Enter 10 digits">
+            </div>
+
+             <div class="info">
+                <label> Location</label>
+                <input id="city" type="text" placeholder="Enter city">
+            </div>
+
+            <div class="info">
+                <label>Enter the Problem</label>
+                <input id="problem" type="text" placeholder="Enter the problem">
+            </div>
+           
+
+            <div class="info">
+                <label>Review the Problem</label>
+                <textarea required id="review" style="width: 100px;height: 50px; width: 300px;"></textarea>
+            </div>
+            <div class="data">
+                <button id="btn" type="submit"
+                    style="background-color: black;color: white;height: 50px;width: 80px ;">Submit</button>
+            </div>
+            <p id="display"></p>
+        </form>
+    </div>
+
+    <script>
+
+        const form = document.getElementById("myform")
+        const infodisplay = document.getElementById("display")
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const username = document.getElementById("name").value
+            const mobile = document.getElementById("mobile").value
+            const problem = document.getElementById("problem").value
+            const place = document.getElementById("city").value
+            const review = document.getElementById("review").value
+            console.log(username,mobile,problem,place,review);
+            
+
+            if (!username || !mobile || !problem || !place || !review) {
+                infodisplay.innerText = "Please fill all the mandatory fields";
+                infodisplay.style.color = "red";
+                return;
+            }
+
+            if (mobile.length !== 10) {
+                infodisplay.innerText = "Mobile number must be in 10 digits";
+                 infodisplay.style.color = "blue";
+                return;
+            }
+
+            const data = JSON.parse(localStorage.getItem("forminfo")) || [];
+            console.log(data);
+            const storeinfo = { username, mobile, place, problem, review }
+            console.log(storeinfo);
+            data.push(storeinfo);
+            localStorage.setItem("forminfo", JSON.stringify(data));
+            alert("Successfully Submitted")
+            form.reset();
+            window.location.href = "table.html"
+        })
+    </script>
+</body>
+</html>

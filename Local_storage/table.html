@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+</head>
+
+<body>
+    <div style="display: flex;justify-content: center;align-items: center;">
+        <table border="3" cellpadding="10" id="storetable">
+            <thead>
+                <th>S.no</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Problem</th>
+                <th>Location</th>
+                <th>Review</th>
+            </thead>
+            <tbody id="table">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const tabledata = localStorage.getItem("forminfo")
+        const table = JSON.parse(tabledata)
+
+        const displaytable = document.getElementById("storetable")
+        table.forEach((e, i) => {
+            const row = `<tr>
+                <td>${i + 1}</td>
+                <td>${e.username}</td>
+                <td>${e.mobile}</td>
+                 <td>${e.problem}</td>
+                <td>${e.place}</td>
+                <td>${e.review}</td>
+                </tr>`
+            displaytable.innerHTML += row;
+
+        })
+
+
+    </script>
+</body>
+
+</html>
